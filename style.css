@@ -1,13 +1,82 @@
 *{
-    color: #DDC9B3;
-}
+    color: #F7F8FA;
+    }
 
 body{
-    background-color: #DDC9B3;
+    background-color: #F7F8FA;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+}
+.crop {
+    position: absolute;
+    display: flex;
+    width: 1800px;
+    height: 520px;
+    overflow: hidden;
+    top:-150px;
+    
 }
 
+
+.crop img {
+    width: 100%;
+    filter: brightness(50%);
+
+    }
+
+    h1{
+        position: absolute;
+        display: inline-block;
+        font-size: 30px;
+        text-align: center;
+        top: 150px;
+        width: 100%;
+        font-family: helvetica;
+        
+    }
+ h1 .orange {
+     background-color: transparent;
+     color: orange;
+ }
 #search{
-    margin: 20px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    top: 39vh;
+    transform: translate(-50% );
+    width: 900px;
+    height: 85px;
+    text-align: left;
+    background-color: white;
+    overflow: hidden;
+    box-shadow:  3px 3px 5px 2px rgba(150, 150, 150, 0.795);
+    border-radius: 4px;
+    padding: 9px;
+       
+}
+    button{ 
+    float: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100px;
+    background-color: #00ADEF;
+    border: none;
+    color:white;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#magni {
+    -webkit-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
+    color:white;
+    font-size: 40px;
+    text-shadow: -0.5px 0 #474747c0;
 }
 
 input{
@@ -21,6 +90,9 @@ input{
     box-sizing: border-box;
     color: #443729;
     font-weight: bold;
+    position: relative;
+
+    
 }
 
 label{
@@ -63,99 +135,94 @@ label{
      background-color: #f1f1f1;
 }
 
+#results {
+    position: absolute;
+    width: 1200px;
+    display: inline-block;
+    top: 65%;
+left: 17%;
+}
+
 .result{
     font-family: 'Raleway', sans-serif;
-    display: grid;
-    grid-template-columns: 350px 90px 280px;
-    grid-template-areas: 
-    "i la a"
-    "i lpr p"
-    "i lr r"
-    "i lpark park";
-    box-shadow: 1px 1px 3px #0a1612;
+    display: inline-block;
+    position: relative;
+    box-shadow: 1px 1px 3px #0a161236;
     margin: 20px;
-    padding: 20px;
-    margin-top: 50px;
-    background-color: #443729;
-    align-items: center;
+    background-color: #ffffff;
+    height: 400px;
+    overflow: hidden;
+
+    
+}
+.result img {
+    height: 260px;
+    padding-bottom: 10px;
+
+    
+}
+.rooms {
+    color:black;
+}
+.address {
+    color:black;
+
+}
+.price {
+    color:black;
+}
+
+.parking {
+    color:black;
+}
+.immediate{
+    color:black;
+}
+
+.email{
+    color:black;
 }
 
 .check-group{
     height: 35px;
+    display: inline-block;
+    position: relative;
 }
 
-button{
-    margin-top: 10px;
-    background-color: #7A6C5D;
-    border: none;
-    color: #DDC9B3;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: 2px solid #443729;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 button:focus {outline:0;}
 
-button:active{background-color: #443729;}
+button:active{background-color: #9468e6;}
 
 .result>img{
-    max-width: 325px;
-    grid-area: i;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 5px;
+    position: relative;
+    width: 320px;
+
+    height: 260px;
+
 }
 
 .result>.label{
     font-weight: bold;
 }
 
-.result>.l-addr{
-    grid-area: la;
+.result>.immediate{
+    /* grid-area: lpark; */
+    margin: 2px;
+
 }
-
-.result>.l-price{
-    grid-area: lpr;
-}
-
-.result>.l-rooms{
-    grid-area: lr;
-}
-
-.result>.l-park{
-    grid-area: lpark;
-}
-
-.result>.l-immediate{}
-
-.result>.address{
-    grid-area: a;
-}
-
-.price{
-    grid-area: p;
-}
-
-.result>.rooms {
-    grid-area: r;
-}
-
-.result>.parking{
-    grid-area: park;
-}
-
-.result>.immediate{}
 
 .no-match{
+    position: absolute;
     color: #DD6300;
     display: inline-block;
     font-weight: bold;
     margin: 10px;
-    padding: 10px;
+    left: 45%;
+    transform: translate(-50%);
+    /* padding: 10px; */
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
+    font-size: 25px;
 }
