@@ -16,9 +16,23 @@ body{
     height: 520px;
     overflow: hidden;
     top:-150px;
-    
+    left: 50%;
+    transform: translate(-50%);
 }
 
+hr { 
+    position: relative;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 0.8px;
+    background:black;
+    bottom: -120px;
+
+  } 
 
 .crop img {
     width: 100%;
@@ -51,7 +65,7 @@ body{
     text-align: left;
     background-color: white;
     overflow: hidden;
-    box-shadow:  3px 3px 5px 2px rgba(150, 150, 150, 0.795);
+    box-shadow:  1px 3px 5px 2px rgba(150, 150, 150, 0.795);
     border-radius: 4px;
     padding: 9px;
        
@@ -84,7 +98,7 @@ input{
     padding: .5em .6em;
     display: inline-block;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    box-shadow: inset 0 px 3px #ddd;
     border-radius: 4px;
     vertical-align: middle;
     box-sizing: border-box;
@@ -140,8 +154,10 @@ label{
     width: 1200px;
     display: inline-block;
     top: 65%;
-left: 17%;
+left: 50%;
+transform: translate(-80%);
 }
+
 
 .result{
     font-family: 'Raleway', sans-serif;
@@ -150,37 +166,80 @@ left: 17%;
     box-shadow: 1px 1px 3px #0a161236;
     margin: 20px;
     background-color: #ffffff;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
+    left:50%;
+    transform: translate(-50%);
+    transition: 0.2s;
 
-    
 }
-.result img {
+
+.result:hover {
+    box-shadow: lightcoral;
+    box-shadow:  1px 3px 4px 2px rgba(150, 150, 150, 0.795);
+
+    transition: 0.2s;
+    }
+
+    .result .result img {
+    position: absolute;
     height: 260px;
-    padding-bottom: 10px;
+    display: block;
 
     
 }
-.rooms {
+.result .rooms {
     color:black;
+    position: absolute;
+    top: 360px;
+    padding-left: 5px;
+
+    
 }
-.address {
+.result .address {
     color:black;
+    position: absolute;
+    top: 315px;
+    padding-left: 5px;
+
 
 }
-.price {
-    color:black;
+.result .price {
+    position: absolute;
+    top:221px;
+    right: 0;
+    background: orange;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:white;
+    font-weight: bold;
+
 }
 
 .parking {
+    position: absolute;
     color:black;
+    background-color: lightblue;
+    padding: 4px;
+    margin-top:10px;
+    left: 7px;
+
 }
 .immediate{
     color:black;
+    position: absolute;
+    bottom: 15px;
+    padding-left: 5px;
+
 }
 
 .email{
     color:black;
+    position: absolute;
+    bottom: 0;
+    padding-left: 5px;
+
 }
 
 .check-group{
@@ -210,19 +269,19 @@ button:active{background-color: #9468e6;}
 .result>.immediate{
     /* grid-area: lpark; */
     margin: 2px;
+    margin-bottom: 10px;
 
 }
 
 .no-match{
     position: absolute;
     color: #DD6300;
-    display: inline-block;
+    display: block;
     font-weight: bold;
-    margin: 10px;
-    left: 45%;
-    transform: translate(-50%);
-    /* padding: 10px; */
+    left: 68%;
+    /* transform: translate(-50%); */
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
+    top: 40px;
 }

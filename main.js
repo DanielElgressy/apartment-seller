@@ -16,6 +16,7 @@ const renderApts = function (apartments) {
     console.log(apartments) 
     const source = $("#apt-template").html();
     const template = Handlebars.compile(source);
+    HandlebarsIntl.registerWith(Handlebars)
     let someHTML = template({apartments});
     $("#results").append(someHTML);
 }

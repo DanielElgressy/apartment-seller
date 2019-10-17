@@ -43,13 +43,14 @@
         {{#each apartments}}
         <div class="result">
             <img src="{{this.img}}">
-            <div class="address">Adress: {{this.address}}</div> 
-            <div class="price">Price: {{price}}</div>
-            <div class="rooms">Rooms: {{rooms}}</div>
-
             {{#if parking}}
-            <div class="parking">parking: there is!</div>
+            <div class="parking">parking</div>
             {{/if}}
+            <div class="address">Address {{this.address}}</div> 
+            <div class="price">{{formatNumber price style="currency" currency="USD"}}</div>
+            <div class="rooms">Rooms: {{rooms}}</div>
+            <hr>
+
 
             {{#if immediate}}
             <div class="immediate">name:{{contactDetails.name}}<br> </div>
@@ -75,6 +76,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/handlebars-intl@1.1.2/dist/handlebars-intl.min.js"></script>
     <script src="apt-data.js"></script>
     <script src="apt-filter.js"></script>
     <script src="main.js"></script>
