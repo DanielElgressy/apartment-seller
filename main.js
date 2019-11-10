@@ -9,6 +9,7 @@ $("button").on("click", function () {
 
     let relevantApts = findRelevantApts(address, minPrice, maxPrice, minRooms, maxRooms, immediate)
     renderApts(relevantApts)
+    console.log(relevantApts)
 })
 
 const renderApts = function (apartments) {
